@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Board from "./Board";
-import { createSecureContext } from "tls";
+// import { createSecureContext } from "tls";
 
 class Game extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class Game extends Component {
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
     const moves = history.map((step, move) => {
-      const desc = move ? "Go to #" + move : "Start the game";
+      const desc = move ? "Go to #" + move + " trial" : "Start the game";
       return (
         <li key={move}>
           <button
@@ -62,7 +62,7 @@ class Game extends Component {
 
     let status, win;
     if (winner) {
-      win = "Winner is " + winner;
+      win = "The winner is " + winner;
     } else {
       status = "Next player is " + (this.state.xIsNext ? "X" : "O");
     }

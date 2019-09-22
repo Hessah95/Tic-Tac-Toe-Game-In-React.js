@@ -1,5 +1,5 @@
 import React from "react";
-import { S } from "xmlchars/xml/1.0/ed5";
+// import { S } from "xmlchars/xml/1.0/ed5";
 
 function Square(props) {
   return (
